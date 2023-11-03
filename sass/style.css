@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background-color: rgba(195, 210, 238, 0.4);
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  grid-template-columns: 1fr 121px minmax(300px, 800px) 1fr;
+}
+
+.menu {
+  grid-column: 3/5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: rgb(76, 128, 238);
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 10px;
+  text-transform: uppercase;
+}
+
+.menu ul li a {
+  display: block;
+  color: #fff;
+  padding: 10px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+}
+
+.menu ul li a:hover {
+  color: rgb(54, 14, 146);
+}
+
+.sec-grid {
+  grid-column: 2/4;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 90px 300px 1fr;
+}
+
+.title-1 {
+  font-family: "Playfair Display SC", serif;
+  color: #02092e;
+  font-weight: 400;
+  font-size: 6rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  grid-column: 1/4;
+}
+
+.sec-grid ul {
+  grid-column: 2/3;
+}
+
+.sec-grid ul li img {
+  max-width: 282px;
+}
+
+.animais h2 {
+  font-family: monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgb(54, 14, 146);
+  margin-bottom: 1rem;
+}
+
+.animais h2::before {
+  content: " ";
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  background-color: rgb(76, 128, 238);
+  margin-right: 10px;
+}
+
+.animais p {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.animais-lista {
+  height: 370px;
+  overflow-y: scroll;
+  grid-column: 2;
+}
+
+.animais-lista::-webkit-scrollbar {
+  width: 14px;
+}
+
+.animais-lista::-webkit-scrollbar-thumb {
+  background-color: rgb(76, 128, 238);
+  margin-left: 2px;
+}
+
+.animais-lista::-webkit-scrollbar-track {
+  background-color: rgba(195, 210, 238, 0);
+}
+
+.descricao-animais {
+  grid-column: 3;
+}
+
+.descricao-animais section {
+  margin-bottom: 3rem;
+}
+
+.faq {
+  grid-column: 2/4;
+}
+
+.faq-lista {
+  grid-column: 2/4;
+}
+
+.faq-lista dt {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: rgb(76, 128, 238);
+}
+
+.faq-lista dt::before {
+  content: " ";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background-color: rgb(76, 128, 238);
+  margin-right: 10px;
+}
+
+.faq-lista dd {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 30px;
+}
+
+.mapa {
+  grid-column: 2;
+  margin-bottom: 64px;
+}
+
+.dados {
+  grid-column: 3;
+}
+
+.dados li {
+  color: #02092e;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dados li + li {
+  margin-top: 20px;
+}
+
+.dados li::before {
+  content: " ";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background-color: rgb(76, 128, 238);
+  margin-right: 10px;
+}
+
+.copy {
+  background-color: rgb(76, 128, 238);
+  grid-column: 3/5;
+  margin-bottom: 30px;
+}
+
+.copy p {
+  grid-column: 1/3;
+  padding: 10px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+  .menu,
+  .sec-grid,
+  .copy {
+    grid-column: 1;
+  }
+  .menu {
+    margin-top: 0;
+    margin-bottom: 45px;
+    padding: 10px;
+  }
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu ul li a {
+    font-size: 1rem;
+  }
+  .title-1 {
+    grid-column: 1/-1;
+    font-size: 3.8em;
+  }
+  .sec-grid {
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
+  }
+  .sec-grid .animais-lista {
+    grid-column: 1/2;
+  }
+  .animais-lista img {
+    width: 100%;
+  }
+  .faq-lista,
+  .dados,
+  .mapa {
+    grid-column: 1/3;
+  }
+  .contato {
+    margin-top: 10px;
+  }
+  .mapa {
+    grid-column: 1/3;
+  }
+  .mapa {
+    margin-bottom: 0px;
+  }
+  .copy {
+    margin-top: 64px;
+    margin-bottom: 0px;
+  }
+}
+.pTexto {
+  font-size: 50px;
+}
+
+.red {
+  background-color: red;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
