@@ -1,0 +1,27 @@
+.faq {
+  grid-column: 2/4;
+}
+.faq-lista {
+  grid-column: 2/4;
+}
+.faq-lista dt {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: $color-1;
+}
+
+.faq-lista dt::before {
+  content: " ";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background-color: $color-1;
+  margin-right: 10px;
+}
+.faq-lista dd {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 30px;
+}

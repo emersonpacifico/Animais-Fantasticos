@@ -1,0 +1,69 @@
+.copy {
+  background-color: $color-1;
+  grid-column: 3/5;
+  margin-bottom: 30px;
+}
+.copy p {
+  grid-column: 1/3;
+  padding: 10px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  color: $color-2;
+}
+
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+  .menu,
+  .sec-grid,
+  .copy {
+    grid-column: 1;
+  }
+  .menu {
+    margin-top: 0;
+    margin-bottom: 45px;
+    padding: 10px;
+  }
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu ul li a {
+    font-size: 1rem;
+  }
+  .title-1 {
+    grid-column: 1/-1;
+    font-size: 3.8em;
+  }
+  .sec-grid {
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
+  }
+  .sec-grid .animais-lista {
+    grid-column: 1/2;
+  }
+  .animais-lista img {
+    width: 100%;
+  }
+  .faq-lista,
+  .dados,
+  .mapa {
+    grid-column: 1/3;
+  }
+  .contato {
+    margin-top: 10px;
+  }
+  .mapa {
+    grid-column: 1/3;
+  }
+  .mapa {
+    margin-bottom: 0px;
+  }
+  .copy {
+    margin-top: 64px;
+    margin-bottom: 0px;
+  }
+}

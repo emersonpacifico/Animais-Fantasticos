@@ -1,3 +1,11 @@
+$color-1: rgb(76, 128, 238);
+$color-2: #fff;
+$color-3: rgb(54, 14, 146);
+$color-4: #02092e;
+$color-5: rgba(195, 210, 238, 0);
+$color-6: rgba(195, 210, 238, 0.4);
+$color-7: #222;
+
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +17,8 @@ img {
   max-width: 100%;
 }
 body {
-  background-color: rgba(195, 210, 238, 0.4);
-  color: #222;
+  background-color: $color-6;
+  color: $color-7;
   -webkit-font-smoothing: antialiased;
   display: grid;
   grid-template-columns: 1fr 121px minmax(300px, 800px) 1fr;

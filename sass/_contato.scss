@@ -1,0 +1,24 @@
+.mapa {
+  grid-column: 2;
+  margin-bottom: 64px;
+}
+
+.dados {
+  grid-column: 3;
+}
+.dados li {
+  color: $color-4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.dados li + li {
+  margin-top: 20px;
+}
+
+.dados li::before {
+  content: " ";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background-color: $color-1;
+  margin-right: 10px;
+}
