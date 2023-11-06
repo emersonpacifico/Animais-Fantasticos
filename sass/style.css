@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -161,6 +162,36 @@ body {
   margin-left: 30px;
 }
 
+.js-accordion dd {
+  display: none;
+}
+
+.js-accordion dt::after {
+  content: "⬎";
+  margin-left: 10px;
+}
+
+.js-accordion dt.ativo::after {
+  content: "⬏";
+  margin-left: 10px;
+}
+
+.js-accordion dd.ativo {
+  transition: 0.5s;
+  display: block;
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 30px;
+  }
+}
 .mapa {
   grid-column: 2;
   margin-bottom: 64px;
