@@ -37,3 +37,34 @@ function initAccordion() {
   }
 }
 initAccordion();
+
+function scrollSuave() {
+  const linksInternos = document.querySelectorAll(".js-menu a[href^='#']");
+
+  function scrollB(event) {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute("href");
+    const section = document.querySelector(href);
+    console.log(section);
+
+    // 1-Primeira forma de scroll
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+    // 2
+
+    //  2-Primeira forma de scroll
+    // const topo = section.offsetTop;
+
+    // window.scrollTo({
+    //   top: topo,
+    //   behavior: "smooth",
+    // });
+  }
+
+  linksInternos.forEach((link) => {
+    link.addEventListener("click", scrollB);
+  });
+}
+scrollSuave();
